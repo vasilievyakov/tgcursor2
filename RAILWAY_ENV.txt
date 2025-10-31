@@ -1,0 +1,28 @@
+# Railway - Переменные окружения для настройки
+
+## Скопируйте эти переменные в Railway:
+
+```
+TELEGRAM_API_ID=your_api_id_here
+TELEGRAM_API_HASH=your_api_hash_here
+SECRET_KEY=EkwFPxdpx5UjpDQoLOWapV6s9S2JIgymY_Ev-6wdoAw
+ENVIRONMENT=production
+ALLOWED_ORIGINS=https://vasilievyakov.github.io,https://vasilievyakov.github.io/tgcursor2
+```
+
+**Примечание:** 
+- `DATABASE_URL` и `REDIS_URL` Railway добавит автоматически после создания БД
+- Замените `TELEGRAM_API_ID` и `TELEGRAM_API_HASH` на ваши реальные значения
+
+## Start Command для Railway:
+
+```
+uvicorn app.main:app --host 0.0.0.0 --port $PORT
+```
+
+## Root Directory:
+
+```
+backend
+```
+

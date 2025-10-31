@@ -18,9 +18,12 @@ RUN python -m spacy download en_core_web_sm
 # Copy application code
 COPY . .
 
-# Expose port
+# Expose port (Railway will set PORT env var)
 EXPOSE 8000
 
-# Default command
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Use PORT environment variable for Railway
+ENV PORT=8000
+
+# Default command (Railway will override with PORT env var)
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
 
