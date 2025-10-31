@@ -1,0 +1,7 @@
+# .gitignore для nginx SSL
+nginx/ssl/*
+!nginx/ssl/.gitkeep
+
+# Logs
+nginx/logs/*
+
