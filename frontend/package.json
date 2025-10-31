@@ -54,6 +54,6 @@
     "test:watch": "jest --watch",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
-  "type": "module",
+  "type": "module"
 }
 
