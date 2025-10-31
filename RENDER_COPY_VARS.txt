@@ -1,0 +1,11 @@
+# Render - Quick Copy Variables
+# Скопируйте эти переменные в Render Web Service → Environment Variables
+
+DATABASE_URL=<Internal Database URL из PostgreSQL>
+REDIS_URL=<Internal Redis URL из Redis>
+TELEGRAM_API_ID=your_api_id_here
+TELEGRAM_API_HASH=your_api_hash_here
+SECRET_KEY=EkwFPxdpx5UjpDQoLOWapV6s9S2JIgymY_Ev-6wdoAw
+ENVIRONMENT=production
+ALLOWED_ORIGINS=https://vasilievyakov.github.io,https://vasilievyakov.github.io/tgcursor2
+
