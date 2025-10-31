@@ -1,0 +1,10 @@
+# Render Environment Variables
+# Скопируйте эти переменные в Render Web Service → Environment Variables
+
+DATABASE_URL=
+REDIS_URL=
+TELEGRAM_API_ID=
+TELEGRAM_API_HASH=
+SECRET_KEY=EkwFPxdpx5UjpDQoLOWapV6s9S2JIgymY_Ev-6wdoAw
+ENVIRONMENT=production
+ALLOWED_ORIGINS=https://vasilievyakov.github.io,https://vasilievyakov.github.io/tgcursor2
