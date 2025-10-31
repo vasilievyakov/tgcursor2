@@ -1,0 +1,48 @@
+# Render - Переменные окружения для настройки
+
+## Переменные для Web Service:
+
+```
+TELEGRAM_API_ID=your_api_id_here
+TELEGRAM_API_HASH=your_api_hash_here
+SECRET_KEY=EkwFPxdpx5UjpDQoLOWapV6s9S2JIgymY_Ev-6wdoAw
+ENVIRONMENT=production
+ALLOWED_ORIGINS=https://vasilievyakov.github.io,https://vasilievyakov.github.io/tgcursor2
+```
+
+**Примечание:** 
+- `DATABASE_URL` будет добавлен автоматически после создания PostgreSQL
+- `REDIS_URL` будет добавлен автоматически после создания Redis
+- Замените `TELEGRAM_API_ID` и `TELEGRAM_API_HASH` на ваши реальные значения
+
+## Настройки Web Service:
+
+- **Name:** `tgcursor2-backend`
+- **Environment:** `Python 3`
+- **Region:** `Frankfurt` (или ближайший к вам)
+- **Branch:** `main`
+- **Root Directory:** `backend`
+- **Build Command:** `pip install -r requirements.txt`
+- **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+
+## Настройки PostgreSQL:
+
+- **Name:** `tgcursor2-db`
+- **Database:** `tgcursor2`
+- **User:** `tgcursor2_user`
+- **Region:** тот же что и Web Service
+- **Plan:** `Free` (для начала)
+
+## Настройки Redis:
+
+- **Name:** `tgcursor2-redis`
+- **Region:** тот же что и Web Service
+- **Plan:** `Free`
+
+## После создания сервисов:
+
+1. В Web Service → Environment → добавьте переменные выше
+2. Используйте **Internal Database URL** из PostgreSQL (не Public URL!)
+3. Используйте **Internal Redis URL** из Redis (не Public URL!)
+4. После деплоя выполните миграции через Shell
+
